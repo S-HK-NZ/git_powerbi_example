@@ -1,0 +1,172 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 4
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 494.42976744186046,
+            "y": 4.6939534883721681
+          },
+          "nodeIndex": "DIM_Customer",
+          "size": {
+            "height": 328.98697674418605,
+            "width": 252.77581395348841
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 44.652558139534904,
+            "y": 0
+          },
+          "nodeIndex": "Dim_Date_Excel",
+          "size": {
+            "height": 337,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 936.84108527131752,
+            "y": 4
+          },
+          "nodeIndex": "DIM_Products",
+          "size": {
+            "height": 319.38077519379846,
+            "width": 243.38790697674426
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 472.77209302325576,
+            "y": 496.05209302325591
+          },
+          "nodeIndex": "FactInternetSale",
+          "size": {
+            "height": 289.87069767441858,
+            "width": 246.51720930232557
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 798.3116279069767,
+            "y": 508.51162790697674
+          },
+          "nodeIndex": "Fact_Budget",
+          "size": {
+            "height": 179.81023255813955,
+            "width": 251.2111627906977
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 1195.1333353678385,
+            "y": 371.4666748046875
+          },
+          "nodeIndex": "Key Measures",
+          "size": {
+            "height": 112,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 1434.4807772283036,
+            "y": 268.96139534883724
+          },
+          "nodeIndex": "meshblock-2023-generalised",
+          "nodeLineageTag": "dcd509d8-2e2e-4ba2-a1fe-eeef4079a7ec",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1673.8282190887687,
+            "y": 242.96139534883724
+          },
+          "nodeIndex": "geographic-areas-table-2024",
+          "nodeLineageTag": "95a94eda-ccda-4d17-9bb0-89e1f5d45df1",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1913.1756609492338,
+            "y": 244.96139534883724
+          },
+          "nodeIndex": "urban-rural-2023-generalised",
+          "nodeLineageTag": "172e05bc-8947-4101-98e6-5f3c39ee5777",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2152.5231028096991,
+            "y": 242.96139534883724
+          },
+          "nodeIndex": "2023-census-population-change-by-ethnic-group-and-regional-c",
+          "nodeLineageTag": "495f38b1-5bf9-4377-8591-62430d7288ba",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2391.8705446701642,
+            "y": 242.96139534883724
+          },
+          "nodeIndex": "2023-census-population-change-by-regional-council",
+          "nodeLineageTag": "3feaecd0-4029-43c0-ae7b-135c887d8f23",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2631.2179865306293,
+            "y": 242.96139534883724
+          },
+          "nodeIndex": "2023-census-population-change-by-statistical-area-2",
+          "nodeLineageTag": "28ad4aff-de93-497e-a0d2-3825ec40dbea",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 75,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}
