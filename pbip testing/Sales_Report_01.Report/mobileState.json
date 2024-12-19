@@ -1,0 +1,5 @@
+{
+  "objectId": "",
+  "type": 4,
+  "explorationState": "{\"version\":\"1.8\",\"activeSection\":\"\",\"sections\":{\"ReportSection6dd785fd82782994ab16\":{\"visualContainers\":{\"520df584b7dcd11d5b40\":{\"singleVisual\":{\"visualType\":\"map\",\"mobileObjects\":{\"legend\":[],\"mapControls\":[{\"properties\":{\"autoZoom\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"showZoomButtons\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"centerLatitude\":{\"expr\":{\"Literal\":{\"Value\":\"26.545571427328902D\"}}},\"centerLongitude\":{\"expr\":{\"Literal\":{\"Value\":\"-98.3308011970155D\"}}},\"zoomLevel\":{\"expr\":{\"Literal\":{\"Value\":\"4D\"}}},\"showLassoButton\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"bubbles\":[],\"categoryLabels\":[],\"dataPoint\":[],\"heatMap\":[],\"mapStyles\":[]}}}}}}}"
+}

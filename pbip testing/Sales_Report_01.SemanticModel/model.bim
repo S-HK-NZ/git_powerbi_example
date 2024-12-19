@@ -8,7 +8,7 @@
       },
       {
         "name": "PBI_QueryOrder",
-        "value": "[\"DIM_Products\",\"DIM_Customer\",\"Dim_Date_Excel\",\"FactInternetSale\",\"Fact_Budget\",\"Key Measures\",\"meshblock-2023-generalised\",\"geographic-areas-table-2024\",\"urban-rural-2023-generalised\"]"
+        "value": "[\"DIM_Products\",\"DIM_Customer\",\"Dim_Date_Excel\",\"FactInternetSale\",\"Fact_Budget\",\"Key Measures\",\"meshblock-2023-generalised\",\"geographic-areas-table-2024\",\"urban-rural-2023-generalised\",\"2023-census-population-change-by-ethnic-group-and-regional-c\",\"2023-census-population-change-by-regional-council\",\"2023-census-population-change-by-statistical-area-2\"]"
       },
       {
         "name": "__PBI_TimeIntelligenceEnabled",
@@ -166,6 +166,15 @@
         "fromTable": "Fact_Budget",
         "toColumn": "Date",
         "toTable": "Dim_Date_Excel"
+      },
+      {
+        "name": "AutoDetected_c594a1e7-e79a-4b1a-9664-5c4c1c065acd",
+        "crossFilteringBehavior": "bothDirections",
+        "fromCardinality": "one",
+        "fromColumn": "WKT",
+        "fromTable": "2023-census-population-change-by-regional-council",
+        "toColumn": "WKT",
+        "toTable": "2023-census-population-change-by-ethnic-group-and-regional-c"
       }
     ],
     "sourceQueryCulture": "en-US",
@@ -3093,6 +3102,1165 @@
                 "    Source = Csv.Document(File.Contents(\"C:\\Users\\steve.lo@one.nz\\Downloads\\urban-rural-2023-generalised.csv\"),[Delimiter=\",\", Columns=9, Encoding=65001, QuoteStyle=QuoteStyle.None]),",
                 "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
                 "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"WKT\", type text}, {\"UR2023_V1_00\", Int64.Type}, {\"UR2023_V1_00_NAME\", type text}, {\"UR2023_V1_00_NAME_ASCII\", type text}, {\"IUR2023_V1_00\", Int64.Type}, {\"IUR2023_V1_00_NAME\", type text}, {\"LAND_AREA_SQ_KM\", type number}, {\"AREA_SQ_KM\", type number}, {\"Shape_Length\", type number}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "2023-census-population-change-by-ethnic-group-and-regional-c",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "WKT",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "741606f3-6735-4bbf-865d-b14fd4829fbc",
+            "sourceColumn": "WKT",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "REGC2023_V1_00",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "5b94a200-5726-405d-aa27-532db870de74",
+            "sourceColumn": "REGC2023_V1_00",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "REGC2023_V1_00_NAME",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "2a7dc358-978b-4f9d-a758-6bde37af6dd8",
+            "sourceColumn": "REGC2023_V1_00_NAME",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "REGC2023_V1_00_NAME_ASCII",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "936fe454-23ee-4209-a38e-a5dc329e0756",
+            "sourceColumn": "REGC2023_V1_00_NAME_ASCII",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "VAR_1_1",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "47d9cc3e-bf0b-4305-a811-92f5f188c907",
+            "sourceColumn": "VAR_1_1",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "VAR_1_2",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "bc7c6138-724b-491d-ac1c-aa6f0b944ed3",
+            "sourceColumn": "VAR_1_2",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "VAR_1_3",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "a1eac37e-667f-4b9f-8848-5eac7372d448",
+            "sourceColumn": "VAR_1_3",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "VAR_1_4",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "fa70160b-e823-4314-be9b-05d0451240f5",
+            "sourceColumn": "VAR_1_4",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "VAR_1_5",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "37a98165-6807-4fbe-9963-4f5dd4f77134",
+            "sourceColumn": "VAR_1_5",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "VAR_1_6",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "47ad241c-ae0d-49aa-af11-45478719d4de",
+            "sourceColumn": "VAR_1_6",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "VAR_1_7",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "b15ae6b9-bfcf-4e85-acbf-3ea2d2276516",
+            "sourceColumn": "VAR_1_7",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "VAR_1_8",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "8cbfe07e-d785-4989-a31f-89f1a7ae4498",
+            "sourceColumn": "VAR_1_8",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "VAR_1_9",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "b9cdf09b-4e6c-4834-9aa8-e5233777c7bb",
+            "sourceColumn": "VAR_1_9",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "VAR_1_10",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "aaa1ecad-bd17-4097-93d9-fb594f3b5e71",
+            "sourceColumn": "VAR_1_10",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "VAR_1_11",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "2409d952-79d1-4177-bb5c-effc4f682e9b",
+            "sourceColumn": "VAR_1_11",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "VAR_1_12",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "8a27167c-f0a4-48db-b56f-aee3b3791b32",
+            "sourceColumn": "VAR_1_12",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "VAR_1_13",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "30d6c0a5-c2a7-4844-8582-dad9efa0f0dc",
+            "sourceColumn": "VAR_1_13",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "VAR_1_14",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "984345b9-34d3-49a6-a80d-b366a4a38267",
+            "sourceColumn": "VAR_1_14",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "VAR_1_15",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "eed54610-7599-4adb-b7ae-5c5271f83259",
+            "sourceColumn": "VAR_1_15",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "VAR_1_16",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "9589665c-5943-4a3a-8eb8-55a2add1b560",
+            "sourceColumn": "VAR_1_16",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "VAR_1_17",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "f069d8b7-8252-43dd-b585-3a1012be9615",
+            "sourceColumn": "VAR_1_17",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "VAR_1_18",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "722bf21f-3b0a-4925-a518-d680c5aa0168",
+            "sourceColumn": "VAR_1_18",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "VAR_1_19",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "23f77428-8784-42c8-a287-a42fc5626b39",
+            "sourceColumn": "VAR_1_19",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "VAR_1_20",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "8b5bea02-282b-41a8-9b86-20683d7346d0",
+            "sourceColumn": "VAR_1_20",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "VAR_1_21",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "c912ad84-1552-446f-b74d-6d305e2e978a",
+            "sourceColumn": "VAR_1_21",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "VAR_1_22",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "a5cf0f9c-ff45-416e-ba04-c2a9d09ce266",
+            "sourceColumn": "VAR_1_22",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "VAR_1_23",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "e06d802f-df3d-45ad-95f4-17771f94b868",
+            "sourceColumn": "VAR_1_23",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "VAR_1_24",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "86e436eb-7007-482e-9e97-db1e9f1cc406",
+            "sourceColumn": "VAR_1_24",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "VAR_1_25",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "85d57d30-766e-4dd0-8c14-6420b177d8f3",
+            "sourceColumn": "VAR_1_25",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "VAR_1_26",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "b1219537-ccce-4703-9cc6-328cd9bd730b",
+            "sourceColumn": "VAR_1_26",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "VAR_1_27",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "32c268f5-c086-4e0f-b658-d7c305e01ca2",
+            "sourceColumn": "VAR_1_27",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "VAR_1_28",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "2df3a6e5-149c-469f-a352-1f2ab136e6a2",
+            "sourceColumn": "VAR_1_28",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "VAR_1_29",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "344efb9c-41e8-41fc-ae31-f0ebcaf9a65c",
+            "sourceColumn": "VAR_1_29",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "VAR_1_30",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "5f2dff0d-3067-4367-beaf-90caeeb09865",
+            "sourceColumn": "VAR_1_30",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "VAR_1_31",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "9e26ae1f-783b-40e8-afc0-2fbd579e2ce9",
+            "sourceColumn": "VAR_1_31",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "VAR_1_32",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "5cede53b-6523-4156-9152-34949e3b6f2e",
+            "sourceColumn": "VAR_1_32",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "VAR_1_33",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "94a6e8f1-e6d8-4737-8b29-12392b791cc0",
+            "sourceColumn": "VAR_1_33",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "VAR_1_34",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "711be43e-f428-4e83-9bea-4f544b55e134",
+            "sourceColumn": "VAR_1_34",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "VAR_1_35",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "9f9bb0c4-3eb6-43f3-ad0d-a6814559bbf6",
+            "sourceColumn": "VAR_1_35",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "VAR_1_36",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "76f3a36c-c14e-49c7-a231-4a6bd63901d6",
+            "sourceColumn": "VAR_1_36",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "VAR_1_37",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "2d192629-2cf4-4ba6-ba00-8290d6f11ce7",
+            "sourceColumn": "VAR_1_37",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "VAR_1_38",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "05b484e7-7380-4201-abff-673d338f627d",
+            "sourceColumn": "VAR_1_38",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "VAR_1_39",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "ab8d6511-b5f0-404e-8c19-86e0b7c693fd",
+            "sourceColumn": "VAR_1_39",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "VAR_1_40",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "7af16c31-9b9b-4b92-a539-f018d950dece",
+            "sourceColumn": "VAR_1_40",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "AREA_SQ_KM",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "58f83c54-ffea-4dd6-8618-be2152bdd924",
+            "sourceColumn": "AREA_SQ_KM",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "LAND_AREA_SQ_KM",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "903223dd-78a1-49ca-bb4a-407d28ee84f8",
+            "sourceColumn": "LAND_AREA_SQ_KM",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Shape_Length",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "a3881bc1-46f6-4053-b16a-1c696caa119e",
+            "sourceColumn": "Shape_Length",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "495f38b1-5bf9-4377-8591-62430d7288ba",
+        "partitions": [
+          {
+            "name": "2023-census-population-change-by-ethnic-group-and-regional-c",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(\"C:\\Users\\steve.lo@one.nz\\Downloads\\2023-census-population-change-by-ethnic-group-and-regional-c.csv\"),[Delimiter=\",\", Columns=47, Encoding=65001, QuoteStyle=QuoteStyle.None]),",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"WKT\", type text}, {\"REGC2023_V1_00\", Int64.Type}, {\"REGC2023_V1_00_NAME\", type text}, {\"REGC2023_V1_00_NAME_ASCII\", type text}, {\"VAR_1_1\", Int64.Type}, {\"VAR_1_2\", Int64.Type}, {\"VAR_1_3\", Int64.Type}, {\"VAR_1_4\", Int64.Type}, {\"VAR_1_5\", Int64.Type}, {\"VAR_1_6\", Int64.Type}, {\"VAR_1_7\", Int64.Type}, {\"VAR_1_8\", Int64.Type}, {\"VAR_1_9\", Int64.Type}, {\"VAR_1_10\", Int64.Type}, {\"VAR_1_11\", Int64.Type}, {\"VAR_1_12\", Int64.Type}, {\"VAR_1_13\", Int64.Type}, {\"VAR_1_14\", Int64.Type}, {\"VAR_1_15\", Int64.Type}, {\"VAR_1_16\", Int64.Type}, {\"VAR_1_17\", Int64.Type}, {\"VAR_1_18\", Int64.Type}, {\"VAR_1_19\", Int64.Type}, {\"VAR_1_20\", Int64.Type}, {\"VAR_1_21\", Int64.Type}, {\"VAR_1_22\", Int64.Type}, {\"VAR_1_23\", Int64.Type}, {\"VAR_1_24\", Int64.Type}, {\"VAR_1_25\", type number}, {\"VAR_1_26\", type number}, {\"VAR_1_27\", type number}, {\"VAR_1_28\", type number}, {\"VAR_1_29\", type number}, {\"VAR_1_30\", type number}, {\"VAR_1_31\", type number}, {\"VAR_1_32\", type number}, {\"VAR_1_33\", type number}, {\"VAR_1_34\", type number}, {\"VAR_1_35\", type number}, {\"VAR_1_36\", type number}, {\"VAR_1_37\", type number}, {\"VAR_1_38\", type number}, {\"VAR_1_39\", type number}, {\"VAR_1_40\", type number}, {\"AREA_SQ_KM\", type number}, {\"LAND_AREA_SQ_KM\", type number}, {\"Shape_Length\", type number}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "2023-census-population-change-by-regional-council",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "WKT",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "0be07dab-0c0f-4f36-8c47-f6cfdaa4a415",
+            "sourceColumn": "WKT",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "REGC2023_V1_00",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "ac8907ce-7e7c-4b0c-a0a0-bc17082de4bb",
+            "sourceColumn": "REGC2023_V1_00",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "REGC2023_V1_00_NAME",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b4d3755a-130b-4265-a520-e9e70535e581",
+            "sourceColumn": "REGC2023_V1_00_NAME",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "REGC2023_V1_00_NAME_ASCII",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "2f4bc42e-308f-41c7-b9ce-c02c2c55c984",
+            "sourceColumn": "REGC2023_V1_00_NAME_ASCII",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "VAR_1_1",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "9d25b461-d6ce-4c6c-a3ff-339ee2555dde",
+            "sourceColumn": "VAR_1_1",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "VAR_1_2",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "8e2f0cb1-4964-4392-871e-f102446f7c72",
+            "sourceColumn": "VAR_1_2",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "VAR_1_3",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "eb362fdb-50af-4f46-82af-e24353b8951e",
+            "sourceColumn": "VAR_1_3",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "VAR_1_4",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "7a26cfba-38c1-435c-8e73-5dea20992467",
+            "sourceColumn": "VAR_1_4",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "VAR_1_5",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "148050f4-b585-480a-82f4-026d76c72ea2",
+            "sourceColumn": "VAR_1_5",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "AREA_SQ_KM",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "ee4bfc7a-838a-4e94-b329-8f0f87393bdf",
+            "sourceColumn": "AREA_SQ_KM",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "LAND_AREA_SQ_KM",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "73ff4196-c867-4103-a6df-f22e35b5cc4f",
+            "sourceColumn": "LAND_AREA_SQ_KM",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Shape_Length",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "30287a53-cd23-4a82-9cb1-1bafc761f2dc",
+            "sourceColumn": "Shape_Length",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "3feaecd0-4029-43c0-ae7b-135c887d8f23",
+        "partitions": [
+          {
+            "name": "2023-census-population-change-by-regional-council",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(\"C:\\Users\\steve.lo@one.nz\\Downloads\\2023-census-population-change-by-regional-council.csv\"),[Delimiter=\",\", Columns=12, Encoding=65001, QuoteStyle=QuoteStyle.None]),",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"WKT\", type text}, {\"REGC2023_V1_00\", Int64.Type}, {\"REGC2023_V1_00_NAME\", type text}, {\"REGC2023_V1_00_NAME_ASCII\", type text}, {\"VAR_1_1\", Int64.Type}, {\"VAR_1_2\", Int64.Type}, {\"VAR_1_3\", Int64.Type}, {\"VAR_1_4\", type number}, {\"VAR_1_5\", type number}, {\"AREA_SQ_KM\", type number}, {\"LAND_AREA_SQ_KM\", type number}, {\"Shape_Length\", type number}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "2023-census-population-change-by-statistical-area-2",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "WKT",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "6b30c291-a591-48f0-9e45-6a1ee01b0243",
+            "sourceColumn": "WKT",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "SA22023_V1_00",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "44953930-74e9-4912-95fd-59b0d8382e29",
+            "sourceColumn": "SA22023_V1_00",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "SA22023_V1_00_NAME",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e18fe62d-b64d-4444-8fae-aa0eabd9fb99",
+            "sourceColumn": "SA22023_V1_00_NAME",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "SA22023_V1_00_NAME_ASCII",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "00f071dd-86fe-477a-981b-ddf8eb0b730a",
+            "sourceColumn": "SA22023_V1_00_NAME_ASCII",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "VAR_1_1",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "fd678040-41dd-489a-bb80-9e9647fa41bc",
+            "sourceColumn": "VAR_1_1",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "VAR_1_2",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "368b489f-c26d-4bc3-b0b5-fa9e7f10cfe8",
+            "sourceColumn": "VAR_1_2",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "VAR_1_3",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "89a69f71-2f8d-425f-bb7a-e267a31e503f",
+            "sourceColumn": "VAR_1_3",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "VAR_1_4",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "858f9e57-98c0-4a52-8b28-27a1c7a5df49",
+            "sourceColumn": "VAR_1_4",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "VAR_1_5",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "971d93a3-1350-4139-843f-80ef53a8f701",
+            "sourceColumn": "VAR_1_5",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "AREA_SQ_KM",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "a2604d28-5beb-4f1e-b41e-6fc140be8030",
+            "sourceColumn": "AREA_SQ_KM",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "LAND_AREA_SQ_KM",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "b038245c-fca0-412e-9986-bc72823cfd1d",
+            "sourceColumn": "LAND_AREA_SQ_KM",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Shape_Length",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "0e5ba433-9007-46b6-b8ec-48016df48a09",
+            "sourceColumn": "Shape_Length",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "28ad4aff-de93-497e-a0d2-3825ec40dbea",
+        "partitions": [
+          {
+            "name": "2023-census-population-change-by-statistical-area-2",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(\"C:\\Users\\steve.lo@one.nz\\Downloads\\2023-census-population-change-by-statistical-area-2.csv\"),[Delimiter=\",\", Columns=12, Encoding=65001, QuoteStyle=QuoteStyle.None]),",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"WKT\", type text}, {\"SA22023_V1_00\", Int64.Type}, {\"SA22023_V1_00_NAME\", type text}, {\"SA22023_V1_00_NAME_ASCII\", type text}, {\"VAR_1_1\", Int64.Type}, {\"VAR_1_2\", Int64.Type}, {\"VAR_1_3\", Int64.Type}, {\"VAR_1_4\", type number}, {\"VAR_1_5\", type number}, {\"AREA_SQ_KM\", type number}, {\"LAND_AREA_SQ_KM\", type number}, {\"Shape_Length\", type number}})",
                 "in",
                 "    #\"Changed Type\""
               ],

@@ -118,6 +118,45 @@
             "width": 234
           },
           "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2152.5231028096991,
+            "y": 242.96139534883724
+          },
+          "nodeIndex": "2023-census-population-change-by-ethnic-group-and-regional-c",
+          "nodeLineageTag": "495f38b1-5bf9-4377-8591-62430d7288ba",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2391.8705446701642,
+            "y": 242.96139534883724
+          },
+          "nodeIndex": "2023-census-population-change-by-regional-council",
+          "nodeLineageTag": "3feaecd0-4029-43c0-ae7b-135c887d8f23",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2631.2179865306293,
+            "y": 242.96139534883724
+          },
+          "nodeIndex": "2023-census-population-change-by-statistical-area-2",
+          "nodeLineageTag": "28ad4aff-de93-497e-a0d2-3825ec40dbea",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "All tables",
