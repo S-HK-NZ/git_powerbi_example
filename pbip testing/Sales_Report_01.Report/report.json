@@ -80,13 +80,13 @@
       "ordinal": 5,
       "visualContainers": [
         {
-          "config": "{\"name\":\"8ce4742357700704a40c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":274.33367129502335,\"y\":570,\"width\":300,\"height\":150,\"z\":1}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"2023-census-population-change-by-regional-council.REGC2023_V1_00_NAME_ASCII\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"2\",\"Entity\":\"2023-census-population-change-by-regional-council\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"REGC2023_V1_00_NAME_ASCII\"},\"Name\":\"2023-census-population-change-by-regional-council.REGC2023_V1_00_NAME_ASCII\",\"NativeReferenceName\":\"REGC2023_V1_00_NAME_ASCII\"}]},\"drillFilterOtherVisuals\":true}}",
+          "config": "{\"name\":\"8ce4742357700704a40c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":274.33367129502335,\"y\":570,\"width\":300,\"height\":150,\"z\":1000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"2023-census-population-change-by-regional-council.REGC2023_V1_00_NAME_ASCII\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"2\",\"Entity\":\"2023-census-population-change-by-regional-council\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"REGC2023_V1_00_NAME_ASCII\"},\"Name\":\"2023-census-population-change-by-regional-council.REGC2023_V1_00_NAME_ASCII\",\"NativeReferenceName\":\"REGC2023_V1_00_NAME_ASCII\"}]},\"drillFilterOtherVisuals\":true}}",
           "filters": "[]",
           "height": 150.00,
           "width": 300.00,
           "x": 274.33,
           "y": 570.00,
-          "z": 1.00
+          "z": 1000.00
         },
         {
           "config": "{\"name\":\"eb14d404400d1102360a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":274.33367129502335,\"y\":334.2737718815874,\"width\":300,\"height\":300,\"z\":0}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"2023-census-population-change-by-regional-council.REGC2023_V1_00_NAME\"},{\"queryRef\":\"Sum(2023-census-population-change-by-regional-council.VAR_1_1)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"2\",\"Entity\":\"2023-census-population-change-by-regional-council\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"REGC2023_V1_00_NAME\"},\"Name\":\"2023-census-population-change-by-regional-council.REGC2023_V1_00_NAME\",\"NativeReferenceName\":\"REGC2023_V1_00_NAME\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"2\"}},\"Property\":\"VAR_1_1\"}},\"Function\":0},\"Name\":\"Sum(2023-census-population-change-by-regional-council.VAR_1_1)\",\"NativeReferenceName\":\"VAR_1_1\"}]},\"drillFilterOtherVisuals\":true}}",

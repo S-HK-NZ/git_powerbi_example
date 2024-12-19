@@ -1634,6 +1634,12 @@
             "expression": "SUM(FactInternetSale[SalesAmount])",
             "formatString": "#,0",
             "lineageTag": "705beceb-e872-4cab-972b-4e9543ecf3ef"
+          },
+          {
+            "name": "region_count",
+            "expression": "count('2023-census-population-change-by-ethnic-group-and-regional-c'[REGC2023_V1_00_NAME])",
+            "formatString": "0",
+            "lineageTag": "175b0f69-4cfa-4784-978f-9b59d558f3bc"
           }
         ],
         "partitions": [
